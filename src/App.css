@@ -361,7 +361,9 @@
 
 .date-input {
   box-sizing: border-box;
+  display: block;
   width: 100%;
+  min-width: 0;
   max-width: 100%;
   padding: 14px 18px;
   border: 2px solid rgba(247, 43, 122, 0.2);
@@ -374,6 +376,8 @@
   margin-bottom: 16px;
   transition: border-color 0.2s;
   outline: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .date-input:focus {
