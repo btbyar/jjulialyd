@@ -628,16 +628,26 @@
 /* Tablet */
 @media (max-width: 640px) {
   .app {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 20px 0;
     min-height: 100dvh;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .card {
     padding: 36px 24px;
     border-radius: 28px;
     width: calc(100% - 32px);
-    margin: auto;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .card-lily {
