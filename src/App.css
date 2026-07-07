@@ -703,17 +703,24 @@
     margin-bottom: 24px;
   }
 
-  /* Background decos smaller on mobile */
+  /* Background decos on mobile — use width (images ignore font-size) */
+  .bg-deco {
+    opacity: 1 !important;
+  }
+
   .bg-deco-1,
   .bg-deco-4 {
-    font-size: 2rem;
+    width: 160px !important;
   }
 
   .bg-deco-2,
-  .bg-deco-3,
+  .bg-deco-3 {
+    width: 140px !important;
+  }
+
   .bg-deco-5,
   .bg-deco-6 {
-    font-size: 1.4rem;
+    width: 110px !important;
   }
 
   .bg-deco-7,
