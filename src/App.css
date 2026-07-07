@@ -108,8 +108,10 @@
 .card-wrapper {
   position: relative;
   width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 /* Corner lily flowers */
@@ -326,6 +328,9 @@
   margin-bottom: 16px;
   transition: border-color 0.2s;
   outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
 }
 
 .date-input:focus {
