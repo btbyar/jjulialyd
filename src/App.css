@@ -311,27 +311,11 @@
   text-align: left;
 }
 
-.date-input-wrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-.date-input-emoji {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.15rem;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .date-input {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  padding: 14px 18px 14px 42px;
+  padding: 14px 18px;
   border: 2px solid rgba(247, 43, 122, 0.2);
   border-radius: var(--radius-md);
   font-size: 1rem;
@@ -339,7 +323,7 @@
   font-weight: 600;
   color: var(--text-dark);
   background: white;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   transition: border-color 0.2s;
   outline: none;
 }
@@ -596,21 +580,16 @@
 /* Tablet */
 @media (max-width: 640px) {
   .app {
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 0;
     min-height: 100dvh;
-  }
-
-  .card-wrapper {
-    width: 100%;
-    justify-content: center;
   }
 
   .card {
     padding: 36px 24px;
     border-radius: 28px;
     width: calc(100% - 32px);
-    margin: 0 auto;
+    margin: auto;
   }
 
   .card-lily {
@@ -675,15 +654,6 @@
 
   .picker-title {
     font-size: 1.5rem;
-  }
-
-  .date-input {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-    padding: 12px 14px;
-    overflow: hidden;
   }
 
   .time-slots {

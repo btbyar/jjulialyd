@@ -170,17 +170,14 @@ function DatePickerPage({ onConfirm }) {
       <h2 className="picker-title">Хэзээ уулзах вэ?</h2>
       <p className="picker-subtitle">Дуртай өдрөө сонгоорой 🌸</p>
 
-      <div className="date-input-wrapper">
-        <span className="date-input-emoji">📅</span>
-        <input
-          id="date-picker"
-          type="date"
-          className="date-input"
-          min={minDate}
-          value={date}
-          onChange={e => setDate(e.target.value)}
-        />
-      </div>
+      <input
+        id="date-picker"
+        type="date"
+        className="date-input"
+        min={minDate}
+        value={date}
+        onChange={e => setDate(e.target.value)}
+      />
       <button
         id="btn-confirm"
         className="btn-confirm"
