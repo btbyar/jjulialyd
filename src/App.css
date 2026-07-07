@@ -1,0 +1,779 @@
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #fff0f6 0%, #fce4f0 40%, #f3e8ff 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+
+/* Floating background decorations */
+.bg-deco {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+.bg-deco-1 {
+  top: 8%;
+  left: 5%;
+  font-size: 3.5rem;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.bg-deco-2 {
+  top: 15%;
+  right: 8%;
+  font-size: 2.5rem;
+  animation: float2 7s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.bg-deco-3 {
+  bottom: 20%;
+  left: 10%;
+  font-size: 2rem;
+  animation: float3 5s ease-in-out infinite;
+  opacity: 0.25;
+}
+
+.bg-deco-4 {
+  bottom: 12%;
+  right: 6%;
+  font-size: 3rem;
+  animation: float 8s 1s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.bg-deco-5 {
+  top: 45%;
+  left: 2%;
+  font-size: 1.8rem;
+  animation: float2 9s 2s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+.bg-deco-6 {
+  top: 35%;
+  right: 3%;
+  font-size: 2.2rem;
+  animation: float3 6s 0.5s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+.bg-deco-7 {
+  top: 70%;
+  left: 30%;
+  font-size: 1.5rem;
+  animation: float 7s 3s ease-in-out infinite;
+  opacity: 0.18;
+}
+
+.bg-deco-8 {
+  top: 5%;
+  left: 45%;
+  font-size: 2rem;
+  animation: float2 5.5s 1.5s ease-in-out infinite;
+  opacity: 0.22;
+}
+
+
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(255, 182, 215, 0.5);
+  border-radius: 36px;
+  padding: 52px 48px;
+  max-width: 520px;
+  width: calc(100% - 40px);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(247, 43, 122, 0.12), 0 4px 16px rgba(247, 43, 122, 0.08);
+  animation: slide-up 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Wrapper for card + corner lily images */
+.card-wrapper {
+  position: relative;
+}
+
+/* Corner lily flowers */
+.card-decorations {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-lily {
+  position: absolute;
+  width: 250px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1) brightness(1.05);
+}
+
+.card-lily-top-left {
+  left: -50px;
+  top: -50px;
+}
+
+.card-lily-bottom-left {
+  left: -50px;
+  bottom: -50px;
+}
+
+.card-lily-top-right {
+  right: -50px;
+  top: -50px;
+  transform: scaleX(-1);
+}
+
+.card-lily-bottom-right {
+  right: -50px;
+  bottom: -50px;
+}
+
+/* ========== PAGE 1: Invite ========== */
+.invite-emoji {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.invite-from {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--pink-400);
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.invite-to {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.invite-to span {
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.invite-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin: 12px 0 32px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f72b7a, #c084fc);
+  border-radius: 9999px;
+  margin: 0 auto 28px;
+}
+
+.question-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.question-text .highlight {
+  display: inline-block;
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.btn-yes {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #f72b7a, #e0115f);
+  color: white;
+  box-shadow: 0 6px 24px rgba(247, 43, 122, 0.4);
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-yes::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-yes:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 36px rgba(247, 43, 122, 0.55);
+}
+
+.btn-yes:hover::before {
+  opacity: 1;
+}
+
+.btn-yes:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-no {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background: white;
+  color: var(--text-soft);
+  border: 2px solid rgba(247, 43, 122, 0.2);
+  transition: all 0.15s ease;
+  position: absolute;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn-no:hover {
+  background: #fff0f6;
+  border-color: rgba(247, 43, 122, 0.3);
+}
+
+/* ========== PAGE 2: Date Picker ========== */
+.picker-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+  animation: float3 3s ease-in-out infinite;
+}
+
+.picker-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.picker-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin-bottom: 28px;
+}
+
+.time-slots-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.date-input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(247, 43, 122, 0.2);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: white;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.date-input:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 4px rgba(247, 43, 122, 0.1);
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.time-slot {
+  padding: 12px 10px;
+  border: 2px solid rgba(247, 43, 122, 0.18);
+  border-radius: var(--radius-sm);
+  background: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-mid);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(247, 43, 122, 0.3);
+}
+
+.location-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(247, 43, 122, 0.2);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: white;
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: none;
+}
+
+.location-input:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 4px rgba(247, 43, 122, 0.1);
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  color: white;
+  box-shadow: 0 6px 28px rgba(247, 43, 122, 0.4);
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.btn-confirm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(247, 43, 122, 0.5);
+}
+
+.btn-confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========== PAGE 3: Confirmed ========== */
+.confetti-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: confetti-fall linear forwards;
+}
+
+.confirmed-emoji {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: bounce-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.confirmed-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.confirmed-subtitle {
+  font-size: 1rem;
+  color: var(--text-soft);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.date-summary {
+  background: linear-gradient(135deg, rgba(247, 43, 122, 0.06), rgba(192, 132, 252, 0.06));
+  border: 1.5px solid rgba(247, 43, 122, 0.15);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.date-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  font-weight: 600;
+}
+
+.date-summary-row:not(:last-child) {
+  border-bottom: 1px solid rgba(247, 43, 122, 0.1);
+}
+
+.date-summary-row .icon {
+  font-size: 1.2rem;
+}
+
+.btn-share {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  color: white;
+  box-shadow: 0 4px 20px rgba(247, 43, 122, 0.35);
+  transition: var(--transition);
+}
+
+.btn-share:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(247, 43, 122, 0.5);
+}
+
+.btn-gmail {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #ea4335, #fbbc04);
+  color: white;
+  box-shadow: 0 4px 20px rgba(234, 67, 53, 0.35);
+  transition: var(--transition);
+  margin-top: 12px;
+}
+
+.btn-gmail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(234, 67, 53, 0.5);
+}
+
+.btn-reset {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-soft);
+  border: 2px solid rgba(247, 43, 122, 0.18);
+  transition: var(--transition);
+  margin-top: 12px;
+}
+
+.btn-reset:hover {
+  background: rgba(247, 43, 122, 0.05);
+  border-color: rgba(247, 43, 122, 0.3);
+}
+
+/* Pulse ring on yes button */
+.pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  border: 3px solid rgba(247, 43, 122, 0.5);
+  animation: pulse-ring 1.5s ease-out infinite;
+  pointer-events: none;
+}
+
+/* No counter badge */
+.no-counter {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  white-space: nowrap;
+  animation: fade-in 0.3s ease;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(247, 43, 122, 0.15);
+  box-shadow: 0 2px 8px rgba(247, 43, 122, 0.1);
+}
+
+/* Progress dots */
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(247, 43, 122, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #f72b7a, #c084fc);
+  width: 24px;
+}
+
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 640px) {
+  .app {
+    align-items: flex-start;
+    padding: 20px 0;
+    min-height: 100dvh;
+  }
+
+  .card {
+    padding: 36px 24px;
+    border-radius: 28px;
+    width: calc(100% - 32px);
+    margin: auto;
+  }
+
+  .card-lily {
+    width: 120px;
+  }
+
+  .card-lily-top-left {
+    left: -20px;
+    top: -20px;
+  }
+
+  .card-lily-bottom-left {
+    left: -20px;
+    bottom: -20px;
+  }
+
+  .card-lily-top-right {
+    right: -20px;
+    top: -20px;
+  }
+
+  .card-lily-bottom-right {
+    right: -20px;
+    bottom: -20px;
+  }
+
+
+  /* Invite page */
+  .invite-emoji {
+    font-size: 3.8rem;
+    margin-bottom: 12px;
+  }
+
+  .invite-to {
+    font-size: 1.75rem;
+  }
+
+  .invite-subtitle {
+    font-size: 0.95rem;
+    margin: 10px 0 24px;
+  }
+
+  /* Buttons */
+  .btn-yes {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
+  .btn-no {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    gap: 12px;
+  }
+
+  /* Date picker */
+  .picker-emoji {
+    font-size: 2.8rem;
+  }
+
+  .picker-title {
+    font-size: 1.5rem;
+  }
+
+  .time-slots {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .time-slot {
+    padding: 10px 8px;
+    font-size: 0.82rem;
+  }
+
+  .btn-confirm {
+    padding: 16px;
+    font-size: 1.05rem;
+  }
+
+  /* Confirmed */
+  .confirmed-emoji {
+    font-size: 3.8rem;
+  }
+
+  .confirmed-title {
+    font-size: 1.7rem;
+  }
+
+  .date-summary {
+    padding: 16px 18px;
+  }
+
+  .date-summary-row {
+    font-size: 0.88rem;
+  }
+
+  /* Progress */
+  .progress-dots {
+    margin-bottom: 24px;
+  }
+
+  /* Background decos smaller on mobile */
+  .bg-deco-1,
+  .bg-deco-4 {
+    font-size: 2rem;
+  }
+
+  .bg-deco-2,
+  .bg-deco-3,
+  .bg-deco-5,
+  .bg-deco-6 {
+    font-size: 1.4rem;
+  }
+
+  .bg-deco-7,
+  .bg-deco-8 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small phones (iPhone SE, Galaxy A) */
+@media (max-width: 390px) {
+  .card {
+    padding: 28px 18px;
+  }
+
+  .invite-emoji {
+    font-size: 3rem;
+  }
+
+  .invite-to {
+    font-size: 1.5rem;
+  }
+
+  .invite-from {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .invite-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .btn-yes,
+  .btn-no {
+    padding: 13px 24px;
+    font-size: 0.95rem;
+  }
+
+  .picker-title {
+    font-size: 1.3rem;
+  }
+
+  .time-slot {
+    font-size: 0.78rem;
+    padding: 9px 6px;
+  }
+
+  .btn-confirm {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .confirmed-title {
+    font-size: 1.4rem;
+  }
+
+  .confirmed-emoji {
+    font-size: 3rem;
+  }
+
+  .bg-deco-1,
+  .bg-deco-4 {
+    font-size: 1.5rem;
+  }
+
+  .bg-deco-2,
+  .bg-deco-3,
+  .bg-deco-5,
+  .bg-deco-6 {
+    font-size: 1.2rem;
+  }
+
+  .bg-deco-7,
+  .bg-deco-8 {
+    font-size: 1rem;
+  }
+}
