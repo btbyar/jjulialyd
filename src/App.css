@@ -311,11 +311,27 @@
   text-align: left;
 }
 
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.date-input-emoji {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.15rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .date-input {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  padding: 14px 18px;
+  padding: 14px 18px 14px 42px;
   border: 2px solid rgba(247, 43, 122, 0.2);
   border-radius: var(--radius-md);
   font-size: 1rem;
@@ -323,7 +339,7 @@
   font-weight: 600;
   color: var(--text-dark);
   background: white;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   transition: border-color 0.2s;
   outline: none;
 }
