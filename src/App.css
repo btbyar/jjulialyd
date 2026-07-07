@@ -107,6 +107,9 @@
 /* Wrapper for card + corner lily images */
 .card-wrapper {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Corner lily flowers */
