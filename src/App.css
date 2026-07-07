@@ -666,10 +666,7 @@
     max-width: 100%;
     box-sizing: border-box;
     font-size: 16px;
-    /* iOS zoom-оос сэргийлэх */
     padding: 12px 14px;
-    -webkit-appearance: none;
-    appearance: none;
     overflow: hidden;
   }
 
