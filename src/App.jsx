@@ -43,14 +43,28 @@ function Confetti() {
 /* ── Background decorations ────────────────────────────── */
 function BgDecos() {
   const decos = [
-    '/lily_accent.png', '/lily_accent_2.png', '/lily_accent.png',
-    '/lily_accent_2.png', '/lily_accent_2.png', '/lily_accent.png',
-    '/lily_accent_2.png', '/lily_accent_2.png'
+    { src: '/lily_accent.png', w: 70 },
+    { src: '/lily_accent_2.png', w: 80 },
+    { src: '/lily_accent.png', w: 55 },
+    { src: '/lily_accent_2.png', w: 75 },
+    { src: '/lily_accent.png', w: 60 },
+    { src: '/lily_accent_2.png', w: 65 },
+    { src: '/lily_accent.png', w: 50 },
+    { src: '/lily_accent_2.png', w: 70 },
+    { src: '/lily_accent.png', w: 80 },
+    { src: '/lily_accent_2.png', w: 55 },
+    { src: '/lily_accent.png', w: 65 },
+    { src: '/lily_accent_2.png', w: 60 },
+    { src: '/lily_accent.png', w: 75 },
+    { src: '/lily_accent_2.png', w: 50 },
+    { src: '/lily_accent.png', w: 70 },
+    { src: '/lily_accent_2.png', w: 65 },
   ]
   return (
     <>
       {decos.map((d, i) => (
-        <img key={i} src={d} alt="" className={`bg-deco bg-deco-${i + 1}`} draggable={false} style={{ width: i % 2 === 0 ? 90 : 130, mixBlendMode: 'multiply', opacity: 0.9, filter: 'contrast(1.05)' }} />
+        <img key={i} src={d.src} alt="" className={`bg-deco bg-deco-${i + 1}`} draggable={false}
+          style={{ width: d.w, mixBlendMode: 'multiply', opacity: 0.85, filter: 'contrast(1.05)' }} />
       ))}
     </>
   )

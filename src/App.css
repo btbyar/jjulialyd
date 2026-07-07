@@ -22,67 +22,115 @@
 }
 
 .bg-deco-1 {
-  top: 8%;
-  left: 5%;
-  font-size: 3.5rem;
-  animation: float 6s ease-in-out infinite;
-  opacity: 0.35;
+  top: 5%;
+  left: 4%;
+  animation: float 6.0s 0.0s ease-in-out infinite;
+  opacity: 0.5;
 }
 
 .bg-deco-2 {
-  top: 15%;
-  right: 8%;
-  font-size: 2.5rem;
-  animation: float2 7s ease-in-out infinite;
-  opacity: 0.3;
+  top: 12%;
+  right: 5%;
+  animation: float2 7.0s 0.5s ease-in-out infinite;
+  opacity: 0.45;
 }
 
 .bg-deco-3 {
-  bottom: 20%;
-  left: 10%;
-  font-size: 2rem;
-  animation: float3 5s ease-in-out infinite;
-  opacity: 0.25;
+  top: 28%;
+  left: 2%;
+  animation: float3 5.5s 1.0s ease-in-out infinite;
+  opacity: 0.4;
 }
 
 .bg-deco-4 {
-  bottom: 12%;
-  right: 6%;
-  font-size: 3rem;
-  animation: float 8s 1s ease-in-out infinite;
-  opacity: 0.3;
+  top: 28%;
+  right: 3%;
+  animation: float 8.0s 1.5s ease-in-out infinite;
+  opacity: 0.45;
 }
 
 .bg-deco-5 {
-  top: 45%;
-  left: 2%;
-  font-size: 1.8rem;
-  animation: float2 9s 2s ease-in-out infinite;
-  opacity: 0.2;
+  top: 48%;
+  left: 1%;
+  animation: float2 9.0s 2.0s ease-in-out infinite;
+  opacity: 0.35;
 }
 
 .bg-deco-6 {
-  top: 35%;
-  right: 3%;
-  font-size: 2.2rem;
-  animation: float3 6s 0.5s ease-in-out infinite;
-  opacity: 0.2;
+  top: 48%;
+  right: 2%;
+  animation: float3 6.5s 0.3s ease-in-out infinite;
+  opacity: 0.35;
 }
 
 .bg-deco-7 {
-  top: 70%;
-  left: 30%;
-  font-size: 1.5rem;
-  animation: float 7s 3s ease-in-out infinite;
-  opacity: 0.18;
+  top: 65%;
+  left: 5%;
+  animation: float 7.0s 2.5s ease-in-out infinite;
+  opacity: 0.4;
 }
 
 .bg-deco-8 {
-  top: 5%;
-  left: 45%;
-  font-size: 2rem;
-  animation: float2 5.5s 1.5s ease-in-out infinite;
-  opacity: 0.22;
+  top: 65%;
+  right: 4%;
+  animation: float2 5.5s 1.2s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.bg-deco-9 {
+  top: 80%;
+  left: 10%;
+  animation: float3 6.0s 0.8s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.bg-deco-10 {
+  top: 80%;
+  right: 8%;
+  animation: float 7.5s 1.8s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.bg-deco-11 {
+  top: 2%;
+  left: 25%;
+  animation: float2 8.0s 0.6s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.bg-deco-12 {
+  top: 2%;
+  right: 25%;
+  animation: float3 6.0s 2.2s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.bg-deco-13 {
+  top: 88%;
+  left: 30%;
+  animation: float 5.5s 1.0s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.bg-deco-14 {
+  top: 88%;
+  right: 30%;
+  animation: float2 7.0s 0.4s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.bg-deco-15 {
+  top: 40%;
+  left: 18%;
+  animation: float3 9.0s 3.0s ease-in-out infinite;
+  opacity: 0.25;
+}
+
+.bg-deco-16 {
+  top: 40%;
+  right: 18%;
+  animation: float 8.5s 2.8s ease-in-out infinite;
+  opacity: 0.25;
 }
 
 
@@ -108,10 +156,8 @@
 .card-wrapper {
   position: relative;
   width: 100%;
-  max-width: 600px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
 }
 
 /* Corner lily flowers */
@@ -328,9 +374,6 @@
   margin-bottom: 16px;
   transition: border-color 0.2s;
   outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  display: block;
 }
 
 .date-input:focus {
@@ -585,21 +628,16 @@
 /* Tablet */
 @media (max-width: 640px) {
   .app {
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 0;
     min-height: 100dvh;
-  }
-
-  .card-wrapper {
-    width: 100%;
-    justify-content: center;
   }
 
   .card {
     padding: 36px 24px;
     border-radius: 28px;
     width: calc(100% - 32px);
-    margin: 0 auto;
+    margin: auto;
   }
 
   .card-lily {
@@ -703,30 +741,7 @@
     margin-bottom: 24px;
   }
 
-  /* Background decos on mobile — use width (images ignore font-size) */
-  .bg-deco {
-    opacity: 1 !important;
-  }
-
-  .bg-deco-1,
-  .bg-deco-4 {
-    width: 160px !important;
-  }
-
-  .bg-deco-2,
-  .bg-deco-3 {
-    width: 140px !important;
-  }
-
-  .bg-deco-5,
-  .bg-deco-6 {
-    width: 110px !important;
-  }
-
-  .bg-deco-7,
-  .bg-deco-8 {
-    font-size: 1.2rem;
-  }
+  /* bg-deco widths handled by inline styles in JSX */
 }
 
 /* Small phones (iPhone SE, Galaxy A) */
